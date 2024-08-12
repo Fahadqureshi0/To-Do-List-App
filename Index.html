@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+      <!--- TO-Do List App  --->
+      <nav>
+        <b><h1>To-Do-List</h1></b></a>
+      <ul>
+        <li><b>Home <i class="fa-solid fa-house"></i></b></li>
+        <li><b>Tasks List <i class="fa-solid fa-list-check"></i></b></li>
+        <li><b>Completed <i class="fa-duotone fa-solid fa-check"></i> </b></li>
+        <li><b>Uncompleted <i class="fa-duotone fa-solid fa-xmark"></i> </b></li>
+        <li><button><b>Login</b></button>
+      </ul>
+    </nav>
+                  <!--- Tasks Box - Box-1 --->
+                  <div class="Task-Boxes">
+                  <div class="First-Task">
+                    <h2><i><u>First Task</u></i></h2>
+                    <br>
+                    <ul>
+                      <li>Reading Book-20 Pages Daily! 📖 <input type="checkbox" id="Task1"></li>
+                      <li> Exercise  <i class="fa-sharp-duotone fa-solid fa-person-walking"></i> <input type="checkbox" id="Task1"></li>
+                      <li>Workout💪   </i> <input type="checkbox" id="Task1"></li>
+                    </ul>
+                  </div>
+
+                  <br>
+                  <!--2nd Box -->
+                  <div class="Second-Task">
+                    <h2><i><u>Second Task</u></i></h2>
+                    <br>
+                    <ul>
+                      <li>University Work 🏢 <input type="checkbox" id="Task1"></li>
+                      <li>Pratice Coding Skills 👨‍💻   <input type="checkbox" id="Task1"></li>
+                      <li>Learn new things 🆕 <input type="checkbox" id="Task1"></li>
+                    </ul>
+                  </div>
+
+
+                  <div class="Third-Task">
+                    <h2><u><i>Third Task</u></i></h2>
+                    <br>
+                    <ul>
+                      <li>Content Creation 🛂    <input type="checkbox" id="Task1"></li>
+                      <li>Networking ✨     <input type="checkbox" id="Task1"></li>
+                      <li>Building Projects 👩‍💻 <input type="checkbox" id="Task1"></li>
+                    </ul>
+                  </div>
+                </div>
+
+
+                <br>
+                <!--Task Completed-->
+                <div id="Task-Completed"   class="notification">
+                  Task Completed Successfully! 
+                </div>
+                <br>
+
+                <button onclick="showNotification()"><b>Completed Tasks</b></button>
+
+               
+                <!---To DO list app-->`
+
+
+                 <br>
+                <h1><b>To-Do List</b></h1>
+               <div class="Task-Manager">
+                 <dotlottie-player src="https://lottie.host/80310593-0f10-40c5-a30f-a698bd47af8f/wDM9dxFRwB.json" background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></dotlottie-player></div>
+
+                <!--Task Lists-->
+
+                 <div class="Task-lists">
+                 <div class="tasks-list-1">
+                  <h1><u>Add 1st Task</u></h1>
+                  <br>
+                  <form id="taskForm" action="/submit-tasks" method="post">
+                    <input type="text" id="taskInput" name="task" placeholder="Enter a task" />
+                    <br>
+                    <input type="hidden" id="tasksData" name="tasksData">
+                    <button type="submit"><b>Submit Tasks</b></button>
+                  </form>
+              </div>
+
+
+              <div class="tasks-list-2">
+                <h1><u>Add 2nd Task</u></h1>
+                <br>
+                <form id="taskForm" action="/submit-tasks" method="post">
+                  <input type="text" id="taskInput" name="task" placeholder="Enter a task" />
+                  <br>
+                  <input type="hidden" id="tasksData" name="tasksData">
+                  <button type="submit"><b>Submit Tasks</b></button>
+                </form>
+              </div>
+
+              <div class="tasks-list-3">
+                <h1><u>Add 3rd Task</u></h1>
+                <br>
+                <form id="taskForm" action="/submit-tasks" method="post">
+                  <input type="text" id="taskInput" name="task" placeholder="Enter a task"/>
+                  <br>
+                  <div id="taskList"></div>
+                  <input type="hidden" id="tasksData" name="tasksData">
+                  <button type="submit"><b>Submit Tasks</b></button>
+                </form>
+              </div>
+            </div>
+            <div class="submit-btn">
+            <button   onclick="showNotification()"><b>Submit all Tasks</b></button>
+          </div>
+                 
+            <!--Sign-up Form-->
+          
+          <div class="signup-container">
+            <form class="signup-form">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+                               
+        <br>
+        <br>
+        <br>          
+        
+        <!--Footer-->
+        <div class="Footer-Name">
+        <h1>To-Do List</h1>
+        <br>
+        <p><span>Copyright © 2024 To-Do List Inc. All rights reserved.</span></p>
+            <p>Terms of Use & Privacy Policy</p>
+            <br>  
+    <!--Javascript Snippets--> 
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>                 
+</body>
+</html>
