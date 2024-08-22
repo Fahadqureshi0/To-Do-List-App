@@ -436,9 +436,120 @@ h1 :hover{
 }
 
 
-/* Media Queries*/
-@media (max-width: 786px) {
-    .Footer-Name h2{
-        
+/* For devices with max-width of 1200px (large tablets, small laptops) */
+@media only screen and (max-width: 1200px) {
+    .First-Task, .Second-Task, .Third-Task, .tasks-list-1, .tasks-list-2, .tasks-list-3 {
+        width: 45%; /* Reduce width */
+        margin-left: 5%; /* Adjust margin */
+    }
+    
+    .Task-Boxes, .Task-lists {
+        flex-direction: column; /* Stack tasks vertically */
+        padding: 0; /* Remove padding */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    nav li {
+        padding: 1rem 0;
     }
 }
+
+/* For devices with max-width of 992px (tablets, large phones) */
+@media only screen and (max-width: 992px) {
+    .First-Task, .Second-Task, .Third-Task, .tasks-list-1, .tasks-list-2, .tasks-list-3 {
+        width: 80%; /* Further reduce width */
+        margin-left: 10%; /* Adjust margin */
+    }
+    
+    .Task-Boxes, .Task-lists {
+        flex-direction: column; /* Stack tasks vertically */
+        padding: 0;
+    }
+    
+    .signup-container {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    nav li {
+        padding: 1rem 0;
+    }
+}
+
+/* For devices with max-width of 768px (portrait tablets, medium phones) */
+@media only screen and (max-width: 768px) {
+    .First-Task, .Second-Task, .Third-Task, .tasks-list-1, .tasks-list-2, .tasks-list-3 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .signup-container {
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    h1, nav h1 {
+        font-size: 24px;
+        padding-left: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    nav li {
+        padding: 1rem 0;
+    }
+    
+    button, .btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+/* For devices with max-width of 576px (small phones) */
+@media only screen and (max-width: 576px) {
+    .First-Task, .Second-Task, .Third-Task, .tasks-list-1, .tasks-list-2, .tasks-list-3 {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .signup-container {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    h1, nav h1 {
+        font-size: 20px;
+        padding-left: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    nav li {
+        padding: 0.5rem 0;
+    }
+    
+    button, .btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+    
+    .Footer-Name h2 {
+        font-size: 16px;
+    }
+}
+
